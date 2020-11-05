@@ -1,0 +1,118 @@
+<div class="container">
+    <div class="row header-container">
+        <div class="col-3 p-0">
+            <img class="icon-burger header-icon" src="/assets/svgs/interface-burger.svg" (click)="toggleBurgerMenu()">
+        </div>
+        <div class="logo col-6 p-0">
+            <img class="logo-header" src="/assets/svgs/logo-header.svg">
+        </div>
+
+        <div class="header-icon-group p-0 col-3 d-flex flex-grow-1 ">
+            <img class="search-icon header-icon" src="/assets/svgs/interface-search.svg" (click)="expandSearchBar()">
+            <img class="cart-icon header-icon" src="/assets/svgs/interface-shopping-cart.svg">
+        </div>
+    </div>
+</div>
+
+<!-- burger menu -->
+
+<div *ngIf="showBurgerMenu" class="burger-menu-container">
+    <img class="icon-burger-close header-icon" src="assets/svgs/close-icon.svg" (click)="closeBurgerMenu()">
+
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button">
+                        Sneakers
+                    </button>
+                    <img class="arrow-down" src="assets/svgs/nav-arrow-down.svg">
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                <ul>
+                    <li>Marques</li>
+                    <li>Nike</li>
+                    <li>Adidas</li>
+                    <li>Reebok</li>
+                    <li>Puma</li>
+                    <li>Ascis</li>
+                    <li>Vans</li>
+                    <li>The North Face</li>
+                    <li>Stussy</li>
+                    <li>Carhart</li>
+                </ul>
+
+                <ul>
+                    <li>Collections</li>
+                    <li>Converse chuck</li>
+                    <li>Taylor All Star 70</li>
+                    <li>Nike Shox</li>
+                    <li>Nike react sertu</li>
+                    <li>Nike air max</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo" data-toggle="collapse"
+            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" >
+                        Vetements
+                    </button>
+                    <img class="arrow-down" src="/assets/svgs/nav-arrow-down.svg">
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul>
+                        <li>Vetements</li>
+                        <li>Chemises</li>
+                        <li>Pantalons</li>
+                        <li>Tee-shirts</li>
+                        <li>Sweats and pulls</li>
+                        <li>Vestes & Manteaux</li>
+                        <li>Shorts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" data-toggle="collapse"
+            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button">
+                        Accessoires
+                    </button>
+                    <img class="arrow-down" src="/assets/svgs/nav-arrow-down.svg">
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul>
+                        <li>Accessoires</li>
+                        <li>Bobs</li>
+                        <li>Casquettes</li>
+                        <li>Bonnets</li>
+                        <li>Sacs a dos</li>
+                        <li>Sac bananes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- expand search bar -->
+
+<div class="active-search-bar"  *ngIf="searchbarActive">
+    <input class="searchbar">
+    <img class="icon-search-close header-icon" src="assets/svgs/close-icon.svg" (click)="closeSearchBar()">
+</div>

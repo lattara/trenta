@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "styles-custom.scss";
+
+@font-face {
+    font-family: 'Swiss Bold';
+    src: url('/assets/fonts/Swis721 BlkOul BT/swiss-721-black-bt.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+// Image slider styles
+
+.slick-list {
+    overflow: visible !important;
+}
+
+.slick-slider {
+    margin: auto;
+}
+
+
+.slick-slide img {
+    width: 100%;
+    padding-right: 10px;
+}
+
+
+

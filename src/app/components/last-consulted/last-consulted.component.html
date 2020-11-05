@@ -1,0 +1,45 @@
+<div class="container">
+    <h2 class="text-uppercase">Derniers articles consultes</h2>
+
+    <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img class="slider-image" src="{{slide.thumbImage}}" alt="tubnail-img">
+            <div class="product-details">
+                <h4 class="shoe-name">Reebok</h4>
+                <span class="shoe-details">Club C 85 Tres Rashe <br> 99.00€</span>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+
+    <div class="arrows-container row">
+        <img class="prev arrow-icon" src="assets/svgs/nav-arrow-left.svg" alt="">
+        <img class="next arrow-icon" src="assets/svgs/nav-arrow-right.svg" alt="">
+    </div>
+
+    <div class="row tumb-container">
+        <div class="col-6">
+            <img class="icons" src="/assets/svgs/insurance-2.svg" alt="deliver-icon" >
+            <h5>Livrason gratuite</h5>
+            <p>Livrason gratuite en France metropolitaine </p>
+        </div>
+
+        <div class="col-6">
+            <img class="icons" src="/assets/svgs/insurance-1.svg">
+            <h5>Paiment securise</h5>
+            <p>Paiement 100% securise, Visa, Mastercard, Paypal</p>
+        </div>
+
+
+        <div class="col-6">
+            <img class="icons" src="/assets/svgs/insurance-4.svg">
+            <h5>Service Client</h5>
+            <p>Une question ? <br> Besoin de'un conseill ? <br >01 84 60 90 20 ou par mail .</p>
+        </div>
+
+        <div class="col-6">
+            <img class="icons" src="/assets/svgs/insurance-3.svg">
+            <h5>Retour</h5>
+            <p>Vous benefciez de 15 jours pour changer d'avis</p>
+        </div>
+    </div>
+</div>

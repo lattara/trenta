@@ -1,0 +1,18 @@
+<div class="container">
+    <h2 class="text-uppercase">Vous Aimerez aussi</h2>
+
+    <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img class="slider-image" src="{{slide.thumbImage}}" alt="tubnail-img">
+            <div class="product-details">
+                <h4 class="shoe-name">Reebok</h4>
+                <p class="shoe-details">Club C 85 Tres Rashe <br> 99.00€</p>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+    <div class="arrows-container row">
+        <img class="prev1 arrow-icon" src="assets/svgs/nav-arrow-left.svg" alt="">
+        <img class="next1 arrow-icon" src="assets/svgs/nav-arrow-right.svg" alt="">
+    </div>
+</div>
+

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <!-- carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel-slide col-sm-12 col-md-12 col-lg-6" data-ride="carousel">
             <div class="carousel-inner">
                 <!-- carousel slides -->
                 <div class="carousel-item active" *ngFor="let image of images; let index = index"
@@ -13,8 +13,16 @@
                 <li *ngFor="let i of indexes; let index = index" data-target="#carouselExampleIndicators"
                     data-slide-to=i [class.active]="index == 0"></li>
             </ol>
+            <div class="row p-0 desktop-gallery">
+                <ul class="col-6 p-2" *ngFor="let image of images; let index = index">
+                    <li>
+                        <img class=" d-block w-100" [src]="image" alt="First slide">
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="shoe-details">
+
+        <div class="shoe-details col-sm-12 col-md-12 col-lg-6">
             <div class="product-name">{{shoe[0].name}}</div>
             <span class="reference">Reference: {{shoe[0].reference}}</span>
             <div class="price d-flex flex-row">

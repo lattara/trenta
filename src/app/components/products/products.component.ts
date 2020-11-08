@@ -32,7 +32,6 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   getDiscountedPrice(): number {
     const discount = ((this.shoe[0].discount / 100) * this.shoe[0].price).toFixed(2);
     // tslint:disable-next-line: radix
@@ -50,6 +49,5 @@ export class ProductsComponent implements OnInit {
   addToCart(): void {
     this.buttonLabel = 'produit ajouté au panier';
   }
-
 
 }

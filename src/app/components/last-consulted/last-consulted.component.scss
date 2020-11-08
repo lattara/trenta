@@ -1,5 +1,5 @@
 .container {
-    padding: 0px 35px 0px 35px;
+    padding: 0px 35px 0px 30px;
     overflow: hidden;
 }
 
@@ -65,4 +65,50 @@ p {
 
 .icons {
     max-width: 50px;
+}
+
+.gray-square-left {
+    display: none;
+}
+
+.tout-voir {
+    display: none;
+}
+
+@media (min-width: 992px) { 
+
+    .container {
+        padding: 110px 0px 0px 130px;
+        overflow: hidden;
+    }
+
+    .tout-voir {
+        margin-top: 6px;
+        font-size: 15px;
+        display: block;
+        text-transform: uppercase;
+        padding-right: 50px;
+    }
+
+    .arrows-container {
+        position: relative;
+        top: -280px;
+        justify-content: start;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .gray-square-left {
+        z-index: -1000;
+        position: absolute;
+        top:130vh;
+        left: 0px;
+        display: block;
+        width: 40vw;
+        height: 450px;
+        background-color: var(--light-grey);
+    }
+
 }

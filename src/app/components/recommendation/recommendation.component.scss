@@ -38,3 +38,44 @@ h2{
 .arrow-icon {
     width: 35px;
 }
+
+.gray-square-right, .tout-voir {
+    display: none;
+}
+
+@media (min-width: 992px) { 
+
+    .container {
+        padding: 110px 0px 0px 130px;
+        overflow: hidden;
+    }
+
+    .tout-voir {
+        margin-top: 6px;
+        font-size: 15px;
+        display: block;
+        text-transform: uppercase;
+        padding-right: 50px;
+    }
+
+    .arrows-container {
+        position: relative;
+        top: -250px;
+        right: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .gray-square-right {
+        z-index: -1000;
+        position: absolute;
+        top:95vh;
+        right: 0px;
+        display: block;
+        width: 40vw;
+        height: 450px;
+        background-color: var(--light-grey);
+    }
+}

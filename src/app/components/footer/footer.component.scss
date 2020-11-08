@@ -88,7 +88,52 @@ input::placeholder{
 }
 
 .logo-footer {
-    width: 70px;
+    max-width: 100px;
     margin: auto;
     margin-top: 20px;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+// DESKTOP
+
+@media (min-width: 992px) {
+
+    .container, .social-media-icons {
+        justify-content: flex-end
+    }
+
+    .accordion {
+        display: none;
+    }
+
+    .logo-footer {
+        max-width: 150px;
+    }
+
+    .desktop-menu {
+        display: flex;
+    }
+
+    .desktop-menu ul {
+        padding-left: 0px;;
+    }
+
+    .desktop-menu li {
+        font-weight: bold;
+        padding:50px;
+    }
+
+    .desktop-menu li ul li {
+        font-weight: 500;
+        padding: 0px;
+        line-height: 35px;
+    }
+
+    .desktop-menu li ul li:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }

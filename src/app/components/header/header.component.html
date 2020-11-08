@@ -1,15 +1,43 @@
+<span>Livrason Gratuite en France sur toutes vos commandes</span>
 <div class="container">
-    <div class="row header-container">
-        <div class="col-3 p-0">
+    <div class="language-options row justify-content-end">
+        <div (click)="english()" [ngClass]="selectedLanguage ==='en' ? 'active-language' : ''">EN</div>
+        <div (click)="french()" [ngClass]="selectedLanguage ==='fr' ? 'active-language' : ''">FR</div>
+    </div>
+    <div class="row header-container flex-nowrap">
+        <div class=" burger-container p-0 col-xs-3 col-sm-3 col-md-3 col-lg-2">
             <img class="icon-burger header-icon" src="/assets/svgs/interface-burger.svg" (click)="toggleBurgerMenu()">
         </div>
-        <div class="logo col-6 p-0">
+        <div class="logo col-xs-6 col-sm-6 col-md-6 col-lg-1 p-0 d-flex justify-content-center">
             <img class="logo-header" src="/assets/svgs/logo-header.svg">
         </div>
+        <div class="menu-desktop-container d-lg-flex d-sm-none justify-content-center col-md-6 col-lg-9 p-0">
 
-        <div class="header-icon-group p-0 col-3 d-flex flex-grow-1 ">
+            <!-- menu desktop -->
+
+            <ul class="main-menu p-0" *ngFor="let item of navbarItems; let i=index">
+                <li (mouseover)="mouseOverMainMenu(i)">{{item.linkName}}
+                    <div class="submenu" *ngIf="selectedSubmenuIndex === item.index && submenuActive === true">
+                        <ul class="p-0" *ngFor="let sublink of item.sublinks; let i=index">
+                            <li (mouseover)="mouseOverSubMenu(i)">{{sublink.subMenuName}} <img class="arrow-icon"
+                                    src="assets/svgs/nav-arrow-right.svg">
+                                <div class="sub-submenu"
+                                    *ngIf="selectedSubmenuMenuIndex === sublink.subMenuIndex && thisSubSubMenuActive === true">
+                                    <ul class="p-0" *ngFor="let subsubLink of sublink.sublinkLinks; let i=index">
+                                        <li class="sub-sublink" (click)="closeMenu()">{{subsubLink}}</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header-icon-group p-0 d-flex justify-content-end col-xs-3 col-sm-3 col-md-3 col-lg-2">
             <img class="search-icon header-icon" src="/assets/svgs/interface-search.svg" (click)="expandSearchBar()">
             <img class="cart-icon header-icon" src="/assets/svgs/interface-shopping-cart.svg">
+            <img class="user-icon header-icon" src="/assets/svgs/interface-user.svg">
         </div>
     </div>
 </div>
@@ -19,11 +47,10 @@
 <div *ngIf="showBurgerMenu" class="burger-menu-container">
     <img class="icon-burger-close header-icon" src="assets/svgs/close-icon.svg" (click)="closeBurgerMenu()">
 
-
     <div class="accordion" id="accordionExample">
         <div class="card">
             <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne">
+                aria-expanded="true" aria-controls="collapseOne">
                 <h5 class="mb-0">
                     <button class="btn btn-link" type="button">
                         Sneakers
@@ -31,38 +58,36 @@
                     <img class="arrow-down" src="assets/svgs/nav-arrow-down.svg">
                 </h5>
             </div>
-
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                <ul>
-                    <li>Marques</li>
-                    <li>Nike</li>
-                    <li>Adidas</li>
-                    <li>Reebok</li>
-                    <li>Puma</li>
-                    <li>Ascis</li>
-                    <li>Vans</li>
-                    <li>The North Face</li>
-                    <li>Stussy</li>
-                    <li>Carhart</li>
-                </ul>
-
-                <ul>
-                    <li>Collections</li>
-                    <li>Converse chuck</li>
-                    <li>Taylor All Star 70</li>
-                    <li>Nike Shox</li>
-                    <li>Nike react sertu</li>
-                    <li>Nike air max</li>
-                </ul>
+                    <ul>
+                        <li>Marques</li>
+                        <li>Nike</li>
+                        <li>Adidas</li>
+                        <li>Reebok</li>
+                        <li>Puma</li>
+                        <li>Ascis</li>
+                        <li>Vans</li>
+                        <li>The North Face</li>
+                        <li>Stussy</li>
+                        <li>Carhart</li>
+                    </ul>
+                    <ul>
+                        <li>Collections</li>
+                        <li>Converse chuck</li>
+                        <li>Taylor All Star 70</li>
+                        <li>Nike Shox</li>
+                        <li>Nike react sertu</li>
+                        <li>Nike air max</li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="card">
-            <div class="card-header" id="headingTwo" data-toggle="collapse"
-            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
                 <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" >
+                    <button class="btn btn-link collapsed" type="button">
                         Vetements
                     </button>
                     <img class="arrow-down" src="/assets/svgs/nav-arrow-down.svg">
@@ -83,8 +108,8 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header" data-toggle="collapse"
-            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+            <div class="card-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree" id="headingThree">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button">
                         Accessoires
@@ -106,13 +131,10 @@
             </div>
         </div>
     </div>
-
-
 </div>
 
 <!-- expand search bar -->
-
-<div class="active-search-bar"  *ngIf="searchbarActive">
+<div class="active-search-bar" *ngIf="searchbarActive === true">
     <input class="searchbar">
     <img class="icon-search-close header-icon" src="assets/svgs/close-icon.svg" (click)="closeSearchBar()">
 </div>

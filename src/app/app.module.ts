@@ -8,7 +8,6 @@ import { ProductsComponent } from './components/products/products.component';
 import { RecommendationComponent } from './components/recommendation/recommendation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LastConsultedComponent } from './components/last-consulted/last-consulted.component';
-import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
 import { NgbCarouselConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { HeaderComponent } from './components/header/header.component';
@@ -21,7 +20,6 @@ import { HeaderComponent } from './components/header/header.component';
     RecommendationComponent,
     FooterComponent,
     LastConsultedComponent,
-    BurgerMenuComponent,
     HeaderComponent
   ],
   imports: [

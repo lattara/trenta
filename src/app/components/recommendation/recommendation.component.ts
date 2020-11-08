@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-recommendation',
@@ -7,27 +8,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecommendationComponent implements OnInit {
 
+  constructor() { }
+
+  @ViewChild('slickModal', { static: true }) slickModal: SlickCarouselComponent;
+
   slides: Array<any> = [
     {
-      image: 'assets/img/slider/1.jpg',
       thumbImage: 'assets/images/img-chaussure-1.jpg',
       alt: 'Rebok',
       title: 'Rebok C 85'
     },
     {
-      image: 'assets/img/slider/2.jpg',
       thumbImage: 'assets/images/img-chaussure-3.jpg',
       alt: 'Rebok',
       title: 'Rebok C 85'
     },
     {
-      image: 'assets/img/slider/3.jpg',
       thumbImage: 'assets/images/img-chaussure-4.jpg',
       alt: 'Rebok',
       title: 'Rebok C 85'
     },
     {
-      image: 'assets/img/slider/4.jpg',
+      thumbImage: 'assets/images/img-chaussure-5.jpg',
+      alt: 'Rebok',
+      title: 'Rebok C 85'
+    },
+    {
+      thumbImage: 'assets/images/img-chaussure-1.jpg',
+      alt: 'Rebok',
+      title: 'Rebok C 85'
+    },
+    {
+      thumbImage: 'assets/images/img-chaussure-3.jpg',
+      alt: 'Rebok',
+      title: 'Rebok C 85'
+    },
+    {
+      thumbImage: 'assets/images/img-chaussure-4.jpg',
+      alt: 'Rebok',
+      title: 'Rebok C 85'
+    },
+    {
       thumbImage: 'assets/images/img-chaussure-5.jpg',
       alt: 'Rebok',
       title: 'Rebok C 85'
@@ -35,19 +56,41 @@ export class RecommendationComponent implements OnInit {
   ];
 
   slideConfig = {
-    slidesToShow: 1,
-    slidesToScroll: 6,
-    dots: false,
-    infinite: false,
-    loop: false,
-    nextArrow: document.getElementsByClassName('next1'),
-    prevArrow: document.getElementsByClassName('prev1'),
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    speed: 1500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
 
-
-  constructor() { }
-
   ngOnInit(): void {
+  }
+  next(): void {
+    this.slickModal.slickNext();
+  }
+  prev(): void {
+    this.slickModal.slickPrev();
   }
 
 }

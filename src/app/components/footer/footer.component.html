@@ -1,10 +1,11 @@
-<div class="container">
+<div class="container mw-100 row m-auto">
 
+    <!-- footer mobile -->
 
-    <div class="accordion" id="accordionExample">
+    <div class="accordion col-12" id="accordionExample">
         <div class="card">
             <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne">
+                aria-expanded="false" aria-controls="collapseOne">
                 <h5 class="mb-0">
                     <button class="btn btn-link" type="button">
                         Shop
@@ -13,7 +14,7 @@
                 </h5>
             </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
                     wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
@@ -21,10 +22,10 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header" id="headingTwo" data-toggle="collapse"
-            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
                 <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" type="button" >
+                    <button class="btn btn-link collapsed" type="button">
                         Sav
                     </button>
                     <img class="arrow-down" src="/assets/svgs/nav-arrow-down.svg">
@@ -38,8 +39,8 @@
             </div>
         </div>
         <div class="card">
-            <div class="card-header" data-toggle="collapse"
-            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+            <div class="card-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree" id="headingThree">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button">
                         A propos
@@ -55,17 +56,53 @@
             </div>
         </div>
     </div>
-    <div class="footer-group">
+    <ul class="desktop-menu col-lg-8">
+
+        <li>Shop
+            <ul>
+                <li>Homme</li>
+                <li>Femme</li>
+                <li>Lifestore</li>
+                <li>Marques</li>
+            </ul>
+        </li>
+        <li>SAV
+            <ul>
+                <li>Livraison</li>
+                <li>Retour</li>
+                <li>Paiement</li>
+                <li>FAQ</li>
+                <li>CGV</li>
+                <li>Infor persos</li>
+                <li>Mentions</li>
+            </ul>
+        </li>
+        <li>A Propos
+            <ul>
+                <li>Features</li>
+                <li>Qui Sommes-nous</li>
+                <li>Travailler avec Fenom</li>
+                <li>Contact</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="footer-group col-sm-12 col-md-12 col-lg-4">
         <h3>Sauvez-nous pour ne rien manquer! </h3>
         <p>Recievez toutes les infos sur les pochaines sorties, offres et actualites de la poutique Fenom</p>
         <div class="subscribe-container row m-auto">
-        <input class="col-8" type="text" placeholder="Inscrivez votre email"> <button class=" col-4 subscribe-button text-uppercase">S'inscrire</button>
-    </div>
-    <div class="social-media-icons">
-        <img src="assets/svgs/network-facebook.svg">
-        <img src="assets/svgs/network-instagram.svg">
-        <img src="assets/svgs/network-twitter.svg">
+            <input class="col-8" type="text" placeholder="Inscrivez votre email"> <button
+                class=" col-4 subscribe-button text-uppercase">S'inscrire</button>
         </div>
-        <img class="row logo-footer" src="assets/svgs/fenom-footer.svg">
+        <div class="social-media-icons col-12">
+            <img src="assets/svgs/network-facebook.svg">
+            <img src="assets/svgs/network-instagram.svg">
+            <img src="assets/svgs/network-twitter.svg">
+        </div>
     </div>
+
+    <div class="col-12 text-center">
+        <img class="logo-footer" src="assets/svgs/fenom-footer.svg">
+    </div>
+    <!-- footer desktop -->
 </div>

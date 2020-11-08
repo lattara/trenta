@@ -152,3 +152,30 @@ li {
     font-weight: bolder;
     margin-bottom: 20px;
 }
+
+.carousel-inner {
+    display: block;
+}
+
+.desktop-gallery {
+    display: none;
+}
+
+
+// DESKTOP
+
+@media (min-width: 992px) { 
+
+    .carousel-slide, .shoe-details {
+        margin-top: 20px;
+    }
+    .carousel-inner, .carousel-indicators {
+        display: none;
+    }
+    .desktop-gallery {
+        display: flex;
+    }
+    .shoe-details {
+        max-width: 450px;
+    }
+}

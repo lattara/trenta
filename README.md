@@ -4,24 +4,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<h2>How to serve project</h2>
 
-## Code scaffolding
+~ cd trenta
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+~ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Build
+<h2>Demo</h2>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Demo of the project is avaiable on the following link: <a href=http://178.62.254.252/></a> or on the following video links:
 
-## Running unit tests
+mobile :computer: : <a href="https://youtu.be/J_oU19euPoE"> Video demo mobile</a>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+desktop :iphone: : <a href="https://youtu.be/zkIJ8BVSXew"> Video demo desktop</a>
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Possible improvements / next sprint
+<ul>
+    <li>Turning SVG icons to font-face to manage size, hover, color easilly</li>
+    <li>Animation transition on burger menu open/close</li>
+    <li>Animation transition on search expanded/closed</li>
+    <li>Custom components for buttons and other reusable parts of code</li>
+    <li>Extracting all constants (footer menu, sizes, country selection, language selection to seperate file for easier adding or removeing of the variables) </li>
+</ul>

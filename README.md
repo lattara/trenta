@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 <h2>Demo</h2>
 
-Demo of the project is avaiable on the following link: <a href="http://178.62.254.252"></a> or on the following video links:
+Demo of the project is avaiable on the following link: <a href="http://178.62.254.252"> Link to demo site</a> or on the following video links:
 
 mobile :computer: : <a href="https://youtu.be/J_oU19euPoE"> Video demo mobile</a>
 
